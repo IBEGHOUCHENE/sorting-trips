@@ -17,7 +17,7 @@ $tripSorter = new TripSorter($tripCollection);
 $transportation = $tripSorter->sortTripCollection()->getTransportation();
 ?>
 <html lang="en">
-<head></head>
+<head><title></title></head>
 <body>
 <table width="50%" border="1" bordercolor="blue" style="margin-left:auto;margin-right:auto;margin-top:50px">
     <tr>
@@ -36,7 +36,6 @@ $transportation = $tripSorter->sortTripCollection()->getTransportation();
             <td><?php echo $trip->getArrival(); ?></td>
         </tr>
     <?php } ?>
-
 </table>
 </body>
 </html>

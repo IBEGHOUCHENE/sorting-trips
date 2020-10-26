@@ -1,6 +1,4 @@
 <?php
-declare(strict_types=1);
-
 use App\Library\TripSorter\Transportation\Transport as TransportAlias;
 use App\Library\TripSorter\TripSorter;
 use PHPUnit\Framework\TestCase;
