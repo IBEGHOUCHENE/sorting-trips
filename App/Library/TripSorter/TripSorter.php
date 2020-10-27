@@ -45,7 +45,7 @@ class TripSorter
     }
 
     /**
-     * Extract the first and the last Trip
+     * Extract the first Trip
      *
      * @param array $tripCollection
      * @return array
