@@ -27,7 +27,7 @@ abstract class Transport
      */
     public $arrival;
 
-    public function __construct($trip)
+    public function __construct(array $trip)
     {
         $this->type = $trip['type'];
         $this->number = $trip['number'] ?? null;

@@ -10,12 +10,11 @@ use PHPUnit\Framework\TestCase;
  */
 class TripSorterTest extends TestCase
 {
-    protected $tripSorter;
-    protected $transportationFactory;
+    public TripSorter $tripSorter;
     /**
      * @var string[][]
      */
-    protected $tripCollection = [
+    public $tripCollection = [
         [
             'type' => 'plane',
             'number' => '11A',
@@ -39,7 +38,7 @@ class TripSorterTest extends TestCase
     /**
      * @var string[]
      */
-    protected $firstTrip = [
+    public $firstTrip = [
         'type' => 'train',
         'departure' => 'A',
         'arrival' => 'B',
@@ -48,7 +47,7 @@ class TripSorterTest extends TestCase
     /**
      * @var string[][]
      */
-    protected $expectedTripCollection = [
+     public $expectedTripCollection = [
         [
             'type' => 'train',
             'departure' => 'A',
