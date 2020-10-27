@@ -126,8 +126,8 @@ class TripSorterTest extends TestCase
     }
 
     /**
-     * @param $expectedCollection
-     * @param $sortedCollection
+     * @param array $expectedCollection
+     * @param array $sortedCollection
      * @return bool
      */
     private function areSimilarCollectionTrips(array $expectedCollection, array $sortedCollection):bool
