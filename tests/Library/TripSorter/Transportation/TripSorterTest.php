@@ -69,25 +69,27 @@ class TripSorterTest extends TestCase
         ],
     ];
 
+    /**
+     *
+     */
     public function setUp(): void
     {
         $this->tripSorter = new TripSorter($this->tripCollection);
     }
 
-    public function testGetFirstTrip()
+    public function testGetFirstTrip():void
     {
         $fistTripInCollection = $this->tripSorter->extractFirstTrip($this->tripCollection);
         $this->assertTrue($this->areSimilarTrip($fistTripInCollection, $this->firstTrip));
     }
 
-    public function testSortCollectionTrips()
+    public function testSortCollectionTrips():void
     {
         $sortedCollection = $this->tripSorter->sortTripCollection()->getTripCollection();
         $this->assertTrue($this->areSimilarCollectionTrips($this->expectedTripCollection, $sortedCollection));
     }
 
-
-    public function testGetTransportation()
+    public function testGetTransportation():void
     {
         $transportation = $this->tripSorter->getTransportation();
 
@@ -106,7 +108,7 @@ class TripSorterTest extends TestCase
      * @param array $b
      * @return bool
      */
-    private function areSimilarTrip(array $a, array $b)
+    private function areSimilarTrip(array $a, array $b):bool
     {
         // if the indexes don't match, return immediately
         if (count(array_diff_assoc($a, $b))) {
@@ -128,7 +130,7 @@ class TripSorterTest extends TestCase
      * @param $sortedCollection
      * @return bool
      */
-    private function areSimilarCollectionTrips(array $expectedCollection, array $sortedCollection)
+    private function areSimilarCollectionTrips(array $expectedCollection, array $sortedCollection):bool
     {
         foreach ($sortedCollection as $key => $collection)
             if ($expectedCollection[$key]['departure'] != $collection['departure'])

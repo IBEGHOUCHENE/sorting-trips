@@ -30,7 +30,7 @@ class TripSorter
      *
      * @return array
      */
-    public function getTripCollection()
+    public function getTripCollection():array
     {
         return $this->tripCollection;
     }
@@ -39,7 +39,7 @@ class TripSorter
      * Set the collection Trips
      * @param array $trpCollection
      */
-    public function setTripCollection(array $trpCollection)
+    public function setTripCollection(array $trpCollection):void
     {
         $this->tripCollection = $trpCollection;
     }
@@ -50,7 +50,7 @@ class TripSorter
      * @param array $tripCollection
      * @return array
      */
-    public function extractFirstTrip(array $tripCollection): array
+    public function extractFirstTrip(array $tripCollection):array
     {
         $firstTrip = [];
         $departureList = array_column($tripCollection, 'departure');
@@ -70,7 +70,7 @@ class TripSorter
      * Sort a trip collection from departure to arrival
      */
 
-    public function sortTripCollection()
+    public function sortTripCollection():TripSorter
     {
         $sizeCollection = count($this->tripCollection);
         $tripCollectionOrdered = array();
@@ -89,7 +89,7 @@ class TripSorter
      *
      * @return array
      */
-    public function getTransportation()
+    public function getTransportation():array
     {
         $transportationFactory = new  TransportationFactory();
         $transportationList = [];
