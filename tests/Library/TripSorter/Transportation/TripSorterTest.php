@@ -10,7 +10,10 @@ use PHPUnit\Framework\TestCase;
  */
 class TripSorterTest extends TestCase
 {
-    public TripSorter $tripSorter;
+    /**
+     * @var TripSorter $tripSorter
+     */
+    public  $tripSorter;
     /**
      * @var string[][]
      */
